@@ -35,7 +35,7 @@ return xmlHttp;
 
 
 <script>
-  var check = function() {
+  var checkPass = function() {
   if (document.getElementById('password').value ==
     document.getElementById('repassword').value) {
     document.getElementById('message').style.color = 'green';
@@ -146,7 +146,7 @@ return xmlHttp;
                     </div>
                         <div class="col-md-6">
                              <label class="label" for="repassword">Confirmation Password</label>
-                             <input id="repassword" type="password" class="form-control" required name="repassword" onkeyup='check();'>
+                             <input id="repassword" type="password" class="form-control" required name="repassword" onkeyup='checkPass();'>
                              
                              <span id='message'></span>
                         </div>
