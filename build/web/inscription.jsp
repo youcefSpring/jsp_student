@@ -117,7 +117,7 @@ return xmlHttp;
                         </div>
                         <div class="col-md-6">
                            <label class="label" for="moyenne">Moyenne</label>
-                           <input type="number" class="form-control" name="moyenne" required> 
+                           <input type="number" class="form-control" name="moyenne" min="0" max="20" required> 
                         </div>
                     </div>
                     

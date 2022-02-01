@@ -197,6 +197,7 @@
                       <th scope="col">Nom</th>
                       <th scope="col">Date</th>
                        <th scope="col">Moyenne</th>
+                        <th scope="col">Mention</th>
                      
                     </tr>
                   </thead> 
@@ -211,17 +212,29 @@
                     <tr>
                       <th scope="row">1</th>
                       <td>
-                          <%= rs.getString(1) %>
+                          <%= rs.getInt(1) %>
                       </td>
                       <td>
                           <%= rs.getString(2) %>
                       </td>
                       <td>
-                          <%= rs.getString(3) %>
+                          <%= rs.getDate(3) %>
                       </td>
-                        <td>
-                            <%= rs.getString(4) %>
+                       <% if(rs.getInt(4) <10 ){ %>
+                        <td  style="color:red;" >
+                            <%= rs.getInt(4) %>
                         </td>
+                         <td>Ajournée</td>
+                        <% } else{
+
+                        %>
+                         <td  style="color:green;" >
+                            <%= rs.getInt(4) %>
+                        </td>
+                        <td>Admis</td>
+                        <% } 
+
+                        %>
                       
                     </tr>
                     <%
